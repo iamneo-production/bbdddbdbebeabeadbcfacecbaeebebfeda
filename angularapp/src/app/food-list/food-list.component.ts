@@ -12,9 +12,9 @@ export class FoodListComponent implements OnInit {
   myList: { name: string, calories: number, quantity: number, image: string }[] = [];
   pattern!: string;
   isEditing: boolean = false;
-  newFoodName: string = "Example Name";
-  newFoodCalories: number = 250;
-  newFoodImage: string = "https://imagefinder.co/storage/w1000/images/2019/02/freestocks_sandwich_3-1000x667.jpg";
+  name: string = "Example Name";
+  calories: number = 250;
+  image: string = "https://imagefinder.co/storage/w1000/images/2019/02/freestocks_sandwich_3-1000x667.jpg";
   quantity!: number;
   totalCalories: number = 0;
 
