@@ -31,18 +31,18 @@ export class FoodListComponent implements OnInit {
 
   newFood() {
     const newFood = {
-      name: this.newFoodName,
-      calories: this.newFoodCalories,
-      image: this.newFoodImage,
+      name: this.name,
+      calories: this.calories,
+      image: this.image,
       quantity: 0
     }
 
     this.foods.unshift(newFood);
 
     this.isEditing = true;
-    this.newFoodName = "";
-    this.newFoodCalories ;
-    this.newFoodImage = "";
+    this.name = "";
+    this.calories ;
+    this.image = "";
   }
 
   addToMyList(food: { name: any; calories: any; quantity: any; image: string; }, quantityInput: { value: any; }) {
