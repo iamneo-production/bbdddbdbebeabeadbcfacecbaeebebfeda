@@ -41,7 +41,7 @@ export class FoodListComponent implements OnInit {
 
     this.isEditing = true;
     this.newFoodName = "";
-    this.newFoodCalories;
+    this.newFoodCalories ;
     this.newFoodImage = "";
   }
 
