@@ -12,9 +12,9 @@ export class FoodListComponent implements OnInit {
   myList: { name: string, calories: number, quantity: number, image: string }[] = [];
   pattern!: string;
   isEditing: boolean = false;
-  name: string = "Example Name";
-  calories: number = 250;
-  image: string = "https://imagefinder.co/storage/w1000/images/2019/02/freestocks_sandwich_3-1000x667.jpg";
+  newFoodName: string = "Example Name";
+  newFoodCalories: number = 250;
+  newFoodImage: string = "https://imagefinder.co/storage/w1000/images/2019/02/freestocks_sandwich_3-1000x667.jpg";
   quantity!: number;
   totalCalories: number = 0;
 
@@ -31,18 +31,18 @@ export class FoodListComponent implements OnInit {
 
   newFood() {
     const newFood = {
-      name: this.name,
-      calories: this.calories,
-      image: this.image,
+      name: this.newFoodName,
+      calories: this.newFoodCalories,
+      image: this.newFoodImage,
       quantity: 0
     }
 
     this.foods.unshift(newFood);
 
     this.isEditing = true;
-    this.name = "";
-    this.calories ;
-    this.image = "";
+    this.newFoodName = "";
+    this.newFoodCalories ;
+    this.newFoodImage = "";
   }
 
   addToMyList(food: { name: any; calories: any; quantity: any; image: string; }, quantityInput: { value: any; }) {
