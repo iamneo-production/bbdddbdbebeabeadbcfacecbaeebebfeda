@@ -8,52 +8,40 @@
         <button (click)="enableUserToAddFood()" class="new-food-button">Add New Food</button>
         <br>
         <div *ngIf="isEditing">
-            <!-- //tulasi --> <div class ="name">
+            <div class="name">
                 <br>
                 <label for="newFoodName">Name</label>
-                <input id="name" type="text" [(ngModel)]="newFoodName">
-          <br> <br>
+                <input id="newFoodName" type="text" [(ngModel)]="newFoodName">
+                <br> <br>
             </div>
-            <div class ="calories">
+            <div class="calories">
                 <label for="newFoodCalories">Calories</label>
-                <input id="calories" type="text" [(ngModel)]="newFoodCalories">
+                <input id="newFoodCalories" type="text" [(ngModel)]="newFoodCalories">
                 <br> <br>
             </div>
             <div class="image">
                 <label for="newFoodImage">Image</label>
-                <input id="image" type="text" [(ngModel)]="newFoodImage">
+                <input id="newFoodImage" type="text" [(ngModel)]="newFoodImage">
                 <br> <br>
             </div>
-
         </div>
     </div>
 
     <ul class="food-list">
         <li class="single-food" *ngIf="isEditing">
-            <img [src]= " newFoodImage ">
-            <h3 class="food-name">
-                {{ newFoodName }}
-            <small class="food-calories">{{ newFoodCalories }} </small>
-            </h3>
+            <img [src]="newFoodImage">
+            <h3 class="food-name">{{ newFoodName }}</h3>
+            <small class="food-calories">{{ newFoodCalories }}</small>
         </li>
-
-
 
         <li class="single-food" *ngFor="let food of foods | foodSearch:'name':pattern;">
             <img [src]="food.image">
-            <h3 class="food-name">
-                {{ food.name }}
-                <!-- <small class="food-calories">{{ food.calories }}</small> -->
-            </h3>
-            <h4>
-                Calory -
-                <small class="food-calories">{{ food.calories }}</small>
-            </h4>
+            <h3 class="food-name">{{ food.name }}</h3>
+            <h4>Calories - <small class="food-calories">{{ food.calories }}</small></h4>
             <input type="text" #quantity value="1">
-            <button (click)="addToMyList(food, quantity)" class="add"> Add </button>
+            <button (click)="addToMyList(food, quantity)" class="add">Add</button>
         </li>
     </ul>
-
 </div>
 
 <div class="my-food-list">
