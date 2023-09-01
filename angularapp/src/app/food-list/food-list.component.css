@@ -1,21 +1,25 @@
-.foods {
-    width: 45%;
-    display: inline-block;
-}
-
 .searchBox {
     width: 50%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25px;
-}
-
-.searchBox > * {
+  }
+  
+  .searchBox > * {
     width: 100%;
     display: block;
-}
+  }
+  
+  .searchBox label {
+    margin-bottom: 5px;
+  
+  }
 
-.searchBox label {
+  img{
+    width: 30px;
+  }
+
+  .searchBox label {
     margin-bottom: 5px;
 }
 
@@ -55,14 +59,15 @@
 
 .newFood {
     overflow: auto;
+    
 }
 
 .new-food-button {
     float: left;
     width: 20%;
     display: block;
-    background-color: rgba(238, 58, 34, 0.925);
-    color: white;
+    background-color:  rgba(238, 58, 34, 0.925);
+    color:white;
     border: none;
 }
 
@@ -71,12 +76,12 @@
     width: 45%;
 }
 
-.add {
-    background-color: rgba(238, 58, 34, 0.925);
-    color: white;
-    border: none;
+.foods {
+    width: 45%;
+    display: inline-block;
 }
-
-img {
-    width: 30px;
+.add{
+    background-color:  rgba(238, 58, 34, 0.925);
+    color:white;
+    border: none;
 }
