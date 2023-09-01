@@ -1,16 +1,16 @@
-.search-box {
+.searchBox {
     width: 50%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25px;
   }
   
-  .search-box > * {
+  .searchBox > * {
     width: 100%;
     display: block;
   }
   
-  .search-box label {
+  .searchBox label {
     margin-bottom: 5px;
   
   }
@@ -19,7 +19,7 @@
     width: 30px;
   }
 
-  .search-box label {
+  .searchBox label {
     margin-bottom: 5px;
 }
 
