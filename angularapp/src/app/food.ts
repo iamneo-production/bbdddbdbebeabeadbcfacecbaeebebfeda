@@ -5,6 +5,7 @@ const foods: Object[] = [
         image: "https://pngimg.com/uploads/milk/milk_PNG12762.png",
         quantity: 0
     },
+        
     {
         name: "Banana",
         calories: 105,
