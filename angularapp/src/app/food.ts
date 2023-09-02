@@ -5,7 +5,12 @@ const foods: Object[] = [
         image: "https://pngimg.com/uploads/milk/milk_PNG12762.png",
         quantity: 0
     },
-        
+    {
+        name:"Apple",
+        calories: 81,
+        image:"https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fred-apple-with-green-leaves-transparent-background-vector-illustration-realistic-vector_545793-565.jpg%3Fw%3D2000&tbnid=leYq5MPxsHnNiM&vet=12ahUKEwi0gI29n4uBAxVzm2MGHR9hC90QMygCegQIARBW..i&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fred-apple-with-green-leaves-transparent-background-vector-illustration-realistic-vector_21706676.htm&docid=hACm6hvEpqCejM&w=2000&h=2000&q=apple%20with%20no%20background&ved=2ahUKEwi0gI29n4uBAxVzm2MGHR9hC90QMygCegQIARBW",
+        quantity:0
+    },
     {
         name: "Banana",
         calories: 105,
