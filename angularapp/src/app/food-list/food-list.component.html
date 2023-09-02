@@ -1,25 +1,25 @@
 <div class="foods">
-    <div class="searchBox">
+    <div id="searchBox">
         <label for="searchBox">Search</label>
         <input id="searchBox" type="text" [(ngModel)]="pattern">
     </div>
 
-    <div class="newFood">
+    <div id="newFood">
         <button (click)="enableUserToAddFood()" class="new-food-button">Add New Food</button>
         <br>
         <div *ngIf="isEditing">
-            <!-- //tulasi --> <div class ="name">
+            <!-- //tulasi --> <div id ="name">
                 <br>
                 <label for="newFoodName">Name</label>
                 <input id="name" type="text" [(ngModel)]="newFoodName">
           <br> <br>
             </div>
-            <div class ="calories">
+            <div id ="calories">
                 <label for="newFoodCalories">Calories</label>
                 <input id="calories" type="text" [(ngModel)]="newFoodCalories">
                 <br> <br>
             </div>
-            <div class="image">
+            <div id="image">
                 <label for="newFoodImage">Image</label>
                 <input id="image" type="text" [(ngModel)]="newFoodImage">
                 <br> <br>
