@@ -1,56 +1,49 @@
-<div id="searchBoxdiv">
-    <label for="searchBox">Search</label>
-    <input id="searchBox" type="text" [(ngModel)]="pattern">
-  </div>
+<div id="foods">
+    <div id="searchBoxdiv">
+      <label for="searchBox">Search</label>
+      <input id="searchBox" type="text" [(ngModel)]="pattern">
+    </div>
   
-  <div id="newFood">
-    <button (click)="enableUserToAddFood()" id="new-food-button">Add New Food</button>
-    <br>
-    <div *ngIf="isEditing">
-      <div id="name">
-        <br>
-        <label for="newFoodName">Name</label>
-        <input id="name" type="text" [(ngModel)]="newFoodName">
-        <br> <br>
-      </div>
-      <div id="calories">
-        <label for="newFoodCalories">Calories</label>
-        <input id="calories" type="text" [(ngModel)]="newFoodCalories">
-        <br> <br>
-      </div>
-      <div id="image">
-        <label for="newFoodImage">Image</label>
-        <input id="image" type="text" [(ngModel)]="newFoodImage">
-        <br> <br>
+    <div id="newFood">
+      <button (click)="enableUserToAddFood()" id="new-food-button">Add New Food</button>
+      <br>
+      <div *ngIf="isEditing">
+        <div id="name">
+          <br>
+          <label for="newFoodName">Name</label>
+          <input id="name" type="text" [(ngModel)]="newFoodName">
+          <br> <br>
+        </div>
+        <div id="calories">
+          <label for="newFoodCalories">Calories</label>
+          <input id="calories" type="text" [(ngModel)]="newFoodCalories">
+          <br> <br>
+        </div>
+        <div id="image">
+          <label for="newFoodImage">Image</label>
+          <input id="image" type="text" [(ngModel)]="newFoodImage">
+          <br> <br>
+        </div>
       </div>
     </div>
+  
+    <ul id="food-list">
+      <li id="single-food" *ngIf="isEditing">
+        <img [src]= " newFoodImage ">
+        <h3 id="food-name">{{ newFoodName }}</h3>
+        <small id="food-calories">{{ newFoodCalories }}</small>
+      </li>
+    </ul>
   </div>
   
-  <ul id="food-list">
-    <li id="single-food" *ngIf="isEditing">
-      <img [src]= " newFoodImage ">
-      <h3 id="food-name">{{ newFoodName }}</h3>
-      <small id="food-calories">{{ newFoodCalories }}</small>
-    </li>
-  
-  
-        <li id="single-food" *ngFor="let food of foods | foodSearch:'name':pattern;">
-            <img [src]="food.image">
-            <h3 id="food-name">{{ food.name }}</h3>
-            <h4>Calory - <small id="food-calories">{{ food.calories }}</small></h4>
-            <input type="text" #quantity value="1">
-            <button (click)="addToMyList(food, quantity)" id="add">Add</button>
-        </li>
-    </ul>
-</div>
-
-<div id="my-food-list">
+  <div id="my-food-list">
     <h2>Today's Foods <small>{{ totalCalories }} cal</small></h2>
     <ul>
-        <li *ngFor="let food of myList">
-            <span>{{ food.name }}</span>
-            <span>{{ food.calories }}</span>
-            <span *ngIf="food.quantity > 1">x{{ food.quantity }}</span>
-        </li>
+      <li *ngFor="let food of myList">
+        <span>{{ food.name }}</span>
+        <span>{{ food.calories }}</span>
+        <span *ngIf="food.quantity > 1">x{{ food.quantity }}</span>
+      </li>
     </ul>
-</div>
+  </div>
+  
