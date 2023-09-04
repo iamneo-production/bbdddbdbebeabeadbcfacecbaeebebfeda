@@ -3,36 +3,41 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25px;
-  }
-  
-  #searchBox > * {
+}
+
+#searchBox {
     width: 100%;
     display: block;
     margin-bottom: 5px;
-  }
-  
-  #searchBox label {
-    margin-bottom: 5px;
-  
-  }
-
-  image{
-    width: 30px;
-  }
-
-  /* #searchBox label {
-    margin-bottom: 5px;
-} */
-
-#food-list {
-    list-style: none;
-    padding: 50px;
-    padding-right: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    width: 100%;
 }
 
-#single-food {
+#newFood {
+    overflow: auto;
+}
+
+#newFoodButton {
+    float: left;
+    width: 20%;
+    display: block;
+    background-color: rgba(238, 58, 34, 0.925);
+    color: white;
+    border: none;
+}
+
+#nameField,
+#caloriesField,
+#imageField {
+    margin-bottom: 5px;
+}
+
+#nameField,
+#caloriesField,
+#imageField input {
+    width: 100%;
+    display: block;
+}
+
+.single-food {
     display: block;
     text-align: center;
     margin-bottom: 50px;
@@ -42,47 +47,24 @@
     border: 1px solid rgba(238, 237, 237, 0.3);
 }
 
-#single-food h3 {
+.food-name {
     font-size: 1em;
 }
 
-#single-food #food-calories {
+.food-calories {
     font-size: 1em;
     color: rgba(238, 58, 34, 0.925);
 }
 
-#single-food img {
+.single-food img {
     width: 25%;
     height: 150px;
     float: left;
     border-radius: 50%;
 }
 
-#newFood {
-    overflow: auto;
-    
-}
-
-#new-food-button {
-    float: left;
-    width: 20%;
-    display: block;
-    background-color:  rgba(238, 58, 34, 0.925);
-    color:white;
-    border: none;
-}
-
-#my-food-list {
-    float: right;
-    width: 45%;
-}
-
-#foods {
-    width: 45%;
-    display: inline-block;
-}
-#add{
-    background-color:  rgba(238, 58, 34, 0.925);
-    color:white;
+.addButton {
+    background-color: rgba(238, 58, 34, 0.925);
+    color: white;
     border: none;
 }
